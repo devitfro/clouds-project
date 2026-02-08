@@ -1,0 +1,18 @@
+﻿@model List<UserPortal.Models.User>
+
+<h2>Пользователи</h2>
+
+<div class="row">
+    @foreach (var user in Model)
+    {
+        <div class="card m-2" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">@user.Nickname</h5>
+                <p class="card-text">Status: @user.Status</p>
+                <p class="card-text">Birth: @user.BirthDate.ToShortDateString()</p>
+                <p class="card-text">Registered: @user.RegistrationDate.ToShortDateString()</p>
+                <p class="card-text">Last login: @user.LastLogin.ToShortDateString()</p>
+            </div>
+        </div>
+    }
+</div>
